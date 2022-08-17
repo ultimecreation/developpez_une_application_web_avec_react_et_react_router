@@ -8,7 +8,7 @@ const Header = () => {
         <div className="overlay">
           <img src={`${process.env.PUBLIC_URL}/images/background.png`} alt="" />
         </div>
-        <figcaption>Chez vous, partout et ailleurs</figcaption>
+        <figcaption><span>Chez vous,</span>{' '}<span> partout et ailleurs</span></figcaption>
       </figure>
     </div>
   )
