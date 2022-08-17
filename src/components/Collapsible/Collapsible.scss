@@ -1,0 +1,31 @@
+.collapsible{
+    margin: 1rem 0;
+    button{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border: none;
+        background: var(--primary);
+        padding: 0.5rem;
+        border-radius: 5px;
+        color:white;
+    }
+
+    .close{
+        display: none;
+    }
+
+    .open{
+        display: block;
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    .content{
+        margin-top: 1rem;
+        color: var(--primary);
+    }
+}
