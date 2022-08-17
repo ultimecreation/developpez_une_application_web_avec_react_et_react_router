@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import Collapsible from '../../components/Collapsible/Collapsible'
+import Slider from '../../components/Slider/Slider'
 import { AppartmentsContext } from '../../context/AppartmentsContext'
 import './AppartmentDetails.scss'
 
@@ -14,10 +15,8 @@ const AppartmentDetails = () => {
     return (
         <div className='appartment-details container'>
             <header>
-                <figure>
-                    <img src={appartment.cover} alt={appartment.title} />
-                    <figcaption>{appartment.title}</figcaption>
-                </figure>
+                <Slider slides={appartment.pictures} />
+                
             </header>
             <section>
                 <div className="infos">

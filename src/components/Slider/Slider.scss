@@ -1,0 +1,30 @@
+.slider{
+    position: relative;
+
+    figure{
+        display: none;
+
+        &.active{
+            display: block;
+        }
+    }
+
+    button{
+        position: absolute;
+        top: 50%;
+        background: transparent;
+        border:none;
+        cursor: pointer;
+        
+        &.prev-button{
+            left: 1rem;
+        }
+        &.next-button{
+            right: 1rem;
+        }
+
+        img{
+            height: 2rem;
+        }
+    }
+}
