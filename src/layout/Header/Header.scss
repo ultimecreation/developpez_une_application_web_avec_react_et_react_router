@@ -1,0 +1,30 @@
+.header {
+    figure {
+        position: relative;
+        height: 223px;
+
+        .overlay {
+            background: #000;
+            position: absolute;
+            height: 100%;
+
+            img {
+                opacity: 0.6;
+            }
+        }
+
+        figcaption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width:100%;
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+        }
+    }
+
+
+
+}
