@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Slider.scss'
 
 const Slider = (props) => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
+    useEffect(()=> {
+        if(props.currentIndex){
+            setCurrentIndex(props.currentIndex )
+        }
+    },[props.currentIndex])
     const switchToPrevSlide = () => {
         currentIndex - 1 < 0
             ? setCurrentIndex(props.slides.length - 1)
@@ -16,10 +21,10 @@ const Slider = (props) => {
             : setCurrentIndex(currentIndex + 1)
     }
 
+
     return (
 
         <div className='slider'>
-            {console.log(currentIndex)}
             {
                 props.slides.length > 1
                 && <button onClick={switchToPrevSlide} className="prev-button">
@@ -29,7 +34,7 @@ const Slider = (props) => {
             {
                 props.slides.map((slide, index) => {
                     return <figure key={index} className={currentIndex === index ? 'active' : ''}>
-                        <img src={slide} alt={`${index}`} />
+                        <img src={slide} alt={`${index}`}/>
                     </figure>
 
 
