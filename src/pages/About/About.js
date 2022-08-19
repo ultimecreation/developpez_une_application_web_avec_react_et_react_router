@@ -1,6 +1,8 @@
 import React from 'react'
+import Collapsible from '../../components/Collapsible/Collapsible'
 import Footer from '../../layout/Footer/Footer'
 import Header from '../../layout/Header/Header'
+import './About.scss'
 
 const About = () => {
     const items = [
@@ -24,7 +26,13 @@ const About = () => {
     return (
         <div className='container'>
             <Header imgSource={`${process.env.PUBLIC_URL}/images/about-bg.png`} imgFigCaption={' '} />
-            About
+            <div className="about">
+                {
+                    items.map((item,index)=> {
+                        return <Collapsible key={index} buttonTitle={item.title} content={item.content}/>
+                    })
+                }
+            </div>
             <Footer />
         </div>
     )
