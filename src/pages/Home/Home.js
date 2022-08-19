@@ -26,7 +26,7 @@ const Home = () => {
         setModalIsOpen(false);
     };
     return (
-        <div className='container'>
+        <div className='container home'>
             <Header imgSource={`${process.env.PUBLIC_URL}/images/background.png`}/>
             <div className="appartment-container">
                 {appartments.map((appartment,index) => {

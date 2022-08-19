@@ -1,4 +1,25 @@
 .appartment-container{
     display: flex;
     flex-flow: row wrap;
+
+    .card{
+        height: 255px;
+        @media screen and (min-width:768px) {
+            height: 340px;
+        }
+        figure{
+            img {
+                height: 255px;
+                @media screen and (min-width:768px) {
+                    height: 340px;
+                }
+                }
+        } 
+    }
+}
+.home .header, .header figure .overlay  {
+    height: 111px!important;
+    @media screen and (min-width:768px) {
+        height: 223px!important;
+    }
 }

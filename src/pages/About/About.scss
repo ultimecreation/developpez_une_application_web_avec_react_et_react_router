@@ -1,7 +1,9 @@
 .about{
     margin-top: 2rem;
-    padding: 0 100px;
-    
+   
+    @media screen and (min-width:768px) {
+        margin: 0 100px;
+    }
     p,button{
         font-size: 1.5rem;
     }
@@ -9,4 +11,7 @@
         padding: 1.1rem;
         
     }
-}
+} 
+.header, .header figure .overlay  {
+        height: 223px!important;
+    }
