@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import  appartments from "../data/logements.json";
+import appartments from "../data/logements.json";
 
 // 1 - create the context
 const AppartmentsContext = createContext({

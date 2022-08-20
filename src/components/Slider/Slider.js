@@ -9,6 +9,7 @@ const Slider = (props) => {
             setCurrentIndex(props.currentIndex )
         }
     },[props.currentIndex])
+
     const switchToPrevSlide = () => {
         currentIndex - 1 < 0
             ? setCurrentIndex(props.slides.length - 1)
@@ -23,7 +24,6 @@ const Slider = (props) => {
 
 
     return (
-
         <div className='slider'>
             {
                 props.slides.length > 1
