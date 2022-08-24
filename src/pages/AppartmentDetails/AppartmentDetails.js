@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Collapsible from '../../components/Collapsible/Collapsible'
 import Slider from '../../components/Slider/Slider'
 import { AppartmentsContext } from '../../context/AppartmentsContext'
+import NotFound from '../NotFound/NotFound'
 import './AppartmentDetails.scss'
 
 const AppartmentDetails = () => {
@@ -11,6 +12,7 @@ const AppartmentDetails = () => {
     const { getAppartmentById } = appartmentsContext
     const appartment = getAppartmentById(id)
 
+    if(!appartment) return <NotFound/>
    
     return (
         <div className='appartment-details container'>
